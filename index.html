@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basildon Refurbs - Premium Refurbished Electronics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>Basildon Refurbs</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#products" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Premium Refurbished Electronics</h1>
+                <p class="hero-subtitle">Quality devices at unbeatable prices. Every device is tested, certified, and ready to impress.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="device-showcase">
+                    <div class="device-laptop">
+                        <div class="laptop-screen">
+                            <div class="screen-content">
+                                <div class="app-icon"></div>
+                                <div class="app-icon"></div>
+                                <div class="app-icon"></div>
+                            </div>
+                        </div>
+                        <div class="laptop-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>Every device undergoes rigorous testing and certification process.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>90%+ Battery Health</h3>
+                    <p>All devices maintain excellent battery performance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>30-Day Returns</h3>
+                    <p>Not satisfied? Return within 30 days for a full refund.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Expert Support</h3>
+                    <p>Our team is here to help you every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="laptops">Laptops</button>
+                <button class="filter-btn" data-filter="tablets">Tablets</button>
+                <button class="filter-btn" data-filter="phones">Phones</button>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-category="laptops" data-modal="example-laptop">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="MacBook Pro" class="product-img-clickable">
+                        <div class="product-badge">Best Seller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Example Laptop</h3>
+                        <p class="product-specs">M1 Chip, 8GB RAM, 256GB SSD</p>
+                        <div class="product-price">
+                            <span class="price-new">£799</span>
+                            <span class="price-old">£1,199</span>
+                        </div>
+                        <a href="https://buy.stripe.com/9B6cN5dQdbT72F0aPS6Zy00" class="btn btn-primary product-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Basildon Refurbs</h2>
+                    <p>We're passionate about providing high-quality refurbished electronics at affordable prices. Our mission is to make technology accessible to everyone while reducing electronic waste.</p>
+                    <p>Every device we sell goes through a comprehensive refurbishment process including hardware testing, software updates, and cosmetic restoration. We stand behind our products with industry-leading warranties and customer support.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfaction Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Devices Sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="quality-badge">
+                        <div class="badge-content">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Quality Assured</h3>
+                            <p>Every device tested</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Basildon Refurbs</h3>
+                    <p>Premium refurbished electronics at unbeatable prices. Quality guaranteed.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new arrivals and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Basildon Refurbs - Powered By RupertG Interactive
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modals -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title">Product Title</h2>
+                    <p id="modal-category" class="modal-category">Category</p>
+                    <div class="modal-specs">
+                        <h3>Specifications</h3>
+                        <ul id="modal-specs-list">
+                            <!-- Specs will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="modal-features">
+                        <h3>Key Features</h3>
+                        <ul id="modal-features-list">
+                            <!-- Features will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="modal-description">
+                        <h3>Description</h3>
+                        <p id="modal-description">Product description goes here.</p>
+                    </div>
+                    <div class="modal-price">
+                        <span class="price-label">Price:</span>
+                        <span id="modal-price" class="price-value">£0</span>
+                        <span id="modal-old-price" class="price-old"></span>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="https://example.com" id="modal-buy-btn" class="btn btn-primary modal-buy-btn">Buy Now</a>
+                        <button class="btn btn-secondary modal-close-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
