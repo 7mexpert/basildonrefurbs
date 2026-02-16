@@ -67,69 +67,73 @@ window.addEventListener('scroll', () => {
 
 // Contact Form Handling
 const contactForm = document.querySelector('.contact-form');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const name = contactForm.querySelector('input[type="text"]').value;
-    const email = contactForm.querySelector('input[type="email"]').value;
-    const subject = contactForm.querySelector('input[type="text"]:nth-child(3)').value;
-    const message = contactForm.querySelector('textarea').value;
-    
-    // Simple validation
-    if (!name || !email || !message) {
-        alert('Please fill in all required fields.');
-        return;
-    }
-    
-    // Simulate form submission
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    
-    setTimeout(() => {
-        alert('Thank you for your message! We will get back to you soon.');
-        contactForm.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
-});
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        const name = contactForm.querySelector('input[type="text"]').value;
+        const email = contactForm.querySelector('input[type="email"]').value;
+        const subject = contactForm.querySelector('input[type="text"]:nth-child(3)').value;
+        const message = contactForm.querySelector('textarea').value;
+        
+        // Simple validation
+        if (!name || !email || !message) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+        
+        // Simulate form submission
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        setTimeout(() => {
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+    });
+}
 
 // Newsletter Form Handling
 const newsletterForm = document.querySelector('.newsletter-form');
-newsletterForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const emailInput = newsletterForm.querySelector('input[type="email"]');
-    const email = emailInput.value;
-    
-    if (!email) {
-        alert('Please enter your email address.');
-        return;
-    }
-    
-    if (!isValidEmail(email)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
-    
-    // Simulate newsletter subscription
-    const submitBtn = newsletterForm.querySelector('button');
-    const originalText = submitBtn.innerHTML;
-    
-    submitBtn.innerHTML = '<i class="fas fa-check"></i>';
-    submitBtn.style.background = '#4CAF50';
-    
-    setTimeout(() => {
-        alert('Thank you for subscribing to our newsletter!');
-        newsletterForm.reset();
-        submitBtn.innerHTML = originalText;
-        submitBtn.style.background = '';
-    }, 2000);
-});
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const emailInput = newsletterForm.querySelector('input[type="email"]');
+        const email = emailInput.value;
+        
+        if (!email) {
+            alert('Please enter your email address.');
+            return;
+        }
+        
+        if (!isValidEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        
+        // Simulate newsletter subscription
+        const submitBtn = newsletterForm.querySelector('button');
+        const originalText = submitBtn.innerHTML;
+        
+        submitBtn.innerHTML = '<i class="fas fa-check"></i>';
+        submitBtn.style.background = '#4CAF50';
+        
+        setTimeout(() => {
+            alert('Thank you for subscribing to our newsletter!');
+            newsletterForm.reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.background = '';
+        }, 2000);
+    });
+}
 
 // Email validation helper function
 function isValidEmail(email) {
@@ -306,6 +310,11 @@ const modalBuyBtn = document.getElementById('modal-buy-btn');
 const closeBtn = document.querySelector('.close-btn');
 const modalCloseBtn = document.querySelector('.modal-close-btn');
 
+// Check if modal elements exist
+if (!modal || !modalImg || !modalTitle || !modalCategory) {
+    console.error('Modal elements not found. Check HTML structure.');
+}
+
 // Product data
 const productData = {
     'example-laptop': {
@@ -451,8 +460,11 @@ function closeModal() {
 // Event listeners for opening modals
 productImages.forEach(img => {
     img.addEventListener('click', (e) => {
+        console.log('Image clicked');
         const productCard = img.closest('.product-card');
+        console.log('Product card:', productCard);
         const productId = productCard.getAttribute('data-modal');
+        console.log('Product ID:', productId);
         openModal(productId);
     });
 });
